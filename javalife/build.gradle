@@ -1,0 +1,29 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
+    apply plugin: 'maven'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+// java文件编码方式设置为utf-8
+    [compileJava,compileTestJava,javadoc]*.options*.encoding = 'UTF-8'
+    version = '1.0-SNAPSHOT'
+    group = "cn.oursmedia"
+    description = "just 4 learn spring"
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+
+    ext {
+        junitVersion = '4.12'
+    }
+
+    dependencies {
+        testCompile(
+                "junit:junit:${junitVersion}",
+        )
+    }
+}

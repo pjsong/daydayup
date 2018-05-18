@@ -1,0 +1,8 @@
+
+rootProject.name = 'daydayup'
+
+def String[] modules = [
+        'javalife:javacore',
+        'javalife:springframework',
+]
+include modules
